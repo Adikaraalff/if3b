@@ -18,12 +18,12 @@ const server = http.createServer((req, res) => {
         res.end()
     } else if (req.url == '/about') {
         res.writeHead(200, {
-            "Content-type" : "text / html"
+            "Content-type" : "text/html"
         })
         res.write("<h2>About</h2><p>ini halaman about</p>")
         res.end()
     } else if (req.url == '/contact') {
-        fstat.readFile(path.join(__dirname, "contact.html"), (err, data) => {
+        fstat.readFile(path.join(_dirname, "contact.html"), (err, data) => {
             res.writeHead(200, {
                 "content-type" : "text/html"
             })
